@@ -1,13 +1,19 @@
 from PyQt5.QtWidgets import QMainWindow, QApplication
-from PyQt5.uic import loadUi
+from window import Ui_MainWindow
 import sys
 
-class MainApp(QMainWindow):
+class MainApp(QMainWindow, Ui_MainWindow):
     def __init__(self):
-        super(MainApp, self).__init__()
+        super().__init__()
 
-        loadUi("MainUI.ui", self)
+        self.setupUi(self)
+        
+        self.send_button.clicked.connect(lambda x: self.helow("nick"))
+        self.copys_select.valueChanged.connect(lambda x: print("change"))
 
+    def helow(self, name: str):
+        print(f"hellow {name}")
+        
 if __name__=="__main__":
     app = QApplication(sys.argv)
     window = MainApp()
