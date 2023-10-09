@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
-    <height>600</height>
+    <width>1000</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,224 +15,221 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="9" column="0" colspan="2">
-     <widget class="QLabel" name="label_7">
-      <property name="text">
-       <string>Size of transmition:</string>
+    <item row="6" column="3">
+     <widget class="QTextBrowser" name="dis_binary_recevied">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
      </widget>
     </item>
-    <item row="2" column="0">
-     <widget class="QPushButton" name="select_image_button">
-      <property name="text">
-       <string>Select Image</string>
+    <item row="6" column="1">
+     <widget class="QTextBrowser" name="dis_binary_sent">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
      </widget>
     </item>
-    <item row="0" column="0" rowspan="2" colspan="4">
-     <widget class="QLabel" name="original_image_display">
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap resource="original_image.qrc">:/newPrefix/square-128.png</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="5" rowspan="2">
+    <item row="5" column="3">
      <widget class="QLabel" name="label_12">
       <property name="text">
-       <string>Probability of Reciving Image With Error:</string>
+       <string>Recived Binary</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </item>
-    <item row="2" column="1" colspan="3">
-     <widget class="QLabel" name="original_image_path">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
+    <item row="3" column="1">
+     <widget class="QLabel" name="dis_sent_img">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
       <property name="text">
        <string/>
       </property>
      </widget>
     </item>
-    <item row="1" column="5">
-     <widget class="QLabel" name="label_3">
+    <item row="3" column="3">
+     <widget class="QLabel" name="dis_recived_img">
       <property name="text">
-       <string>Image Recived</string>
+       <string/>
       </property>
      </widget>
     </item>
-    <item row="5" column="0" colspan="4">
-     <widget class="QLabel" name="label_4">
+    <item row="9" column="3">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Number of Actual Errors:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Probability of Receving Error:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="dis_prob_of_err">
+        <property name="text">
+         <string>----</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="dis_actual_errs">
+        <property name="text">
+         <string>----</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="label_9">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Sent Image</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>Sent Binary</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="sel_copys">
+        <property name="value">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Size of Redundant Image Data:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="sel_prob_bitfilp">
+        <property name="text">
+         <string>.0001</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Copys:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Probability of Bitflip:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="dis_size_of_redundant">
+        <property name="text">
+         <string>----</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Size of original Image Data:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="dis_size_of_orig">
+        <property name="text">
+         <string>----</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="7" column="1">
+     <widget class="QLabel" name="label_15">
       <property name="font">
        <font>
         <pointsize>20</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Transmition Configutarion</string>
+       <string>Configure Transmition</string>
       </property>
      </widget>
     </item>
-    <item row="6" column="0" colspan="3">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Copys:</string>
+    <item row="18" column="2">
+     <widget class="QPushButton" name="btn_send">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
-     </widget>
-    </item>
-    <item row="7" column="0" colspan="2">
-     <widget class="QLabel" name="label_5">
-      <property name="text">
-       <string>Probability of bit flip:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="4">
-     <widget class="QPushButton" name="send_button">
       <property name="text">
        <string>Send</string>
       </property>
      </widget>
     </item>
-    <item row="5" column="6" rowspan="2">
-     <widget class="QLabel" name="error_rec_prob_dis">
-      <property name="text">
-       <string>----</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="2" colspan="2">
+    <item row="2" column="3">
      <widget class="QLabel" name="label_10">
       <property name="text">
-       <string>Binary Sent</string>
+       <string>Recived Image</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </item>
-    <item row="8" column="3">
-     <widget class="QLabel" name="size_of_orig_dis">
-      <property name="text">
-       <string>----</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="5" colspan="2">
-     <widget class="QTextBrowser" name="textBrowser_2"/>
-    </item>
-    <item row="1" column="2" colspan="2">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>Image Sent</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="5">
-     <widget class="QLabel" name="label_14">
-      <property name="text">
-       <string>Error Actualy Recived:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0">
-     <widget class="QLabel" name="label_6">
-      <property name="text">
-       <string>Size of original:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="5" colspan="2">
-     <widget class="QLabel" name="recived_image_display">
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap resource="original_image.qrc">:/newPrefix/square-128.png</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="6">
-     <widget class="QLabel" name="error_actualy_rec_dis">
-      <property name="text">
-       <string>----</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="5">
-     <widget class="QLabel" name="label_11">
-      <property name="text">
-       <string>Binary Recived</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="3">
-     <widget class="QLabel" name="size_of_rec_dis">
-      <property name="text">
-       <string>----</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0" colspan="3">
-     <widget class="QTextBrowser" name="textBrowser">
-      <property name="sizeIncrement">
-       <size>
-        <width>3</width>
-        <height>1</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="3">
+    <item row="4" column="1">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QPushButton" name="btn_select_image">
+        <property name="text">
+         <string>Select Image</string>
+        </property>
+       </widget>
       </item>
       <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+       <widget class="QLabel" name="dis_sent_filename">
+        <property name="text">
+         <string>filename</string>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </item>
-    <item row="6" column="3">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QSpinBox" name="copys_select"/>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
+       </widget>
       </item>
      </layout>
     </item>
@@ -243,15 +240,13 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>900</width>
+     <width>1000</width>
      <height>22</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="original_image.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

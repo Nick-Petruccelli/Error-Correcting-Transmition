@@ -29,4 +29,4 @@ class StatsUtil:
         return probability_sum
     
 if __name__ == "__main__":
-    print(StatsUtil.binom_dist(3,1000,.2))
+    print(StatsUtil.binom_dist(2,3,.9999))
