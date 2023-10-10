@@ -5,6 +5,7 @@ from window import Ui_MainWindow
 from error_correcting_transmition import ErrorCorrectingTransmition as ECT
 from stats_util import StatsUtil
 import sys
+import os
 
 class MainApp(QMainWindow, Ui_MainWindow):
     sent_image_filename: str
@@ -105,15 +106,13 @@ class MainApp(QMainWindow, Ui_MainWindow):
         
         prob = prob*(self.length_of_orig*8)*100
         return prob
-
-
-
-
-
-
         
 if __name__=="__main__":
     app = QApplication(sys.argv)
     window = MainApp()
     window.show()
     app.exec_()
+    try:
+        os.remove(os.getcwd()+"/myImage.png")
+    except:
+        pass
