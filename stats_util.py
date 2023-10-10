@@ -30,3 +30,10 @@ class StatsUtil:
     
 if __name__ == "__main__":
     print(StatsUtil.binom_dist(2,3,.9999))
+
+    print(StatsUtil.choose(1,1))
+
+    prob = StatsUtil.binom_dist(1//2, 1, 1-.0001)
+        
+    prob = prob*(328386*8)*100
+    print(prob)

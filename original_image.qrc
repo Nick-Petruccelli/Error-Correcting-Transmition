@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="newPrefix">
-    <file>FastFoodKitchenUML.png</file>
-    <file>square-128.png</file>
-  </qresource>
-</RCC>
