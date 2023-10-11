@@ -61,6 +61,7 @@ class MainApp(QMainWindow, Ui_MainWindow):
 
         copys = self.copys
         self.prob_of_bitflip = float(self.sel_prob_bitfilp.text())
+        self.num_of_acctual_errs=0
         for i in range(100):
             is_correct = ECT.sim_file_transmition(self.sent_image_filename, copys, self.prob_of_bitflip)
             if(is_correct):
@@ -102,9 +103,9 @@ class MainApp(QMainWindow, Ui_MainWindow):
     def calc_prob_of_err(self)->float:
         copys = self.copys
 
-        prob = StatsUtil.binom_dist((copys//2), copys, 1-self.prob_of_bitflip)
+        prob = StatsUtil.binom_dist(copys//2, copys, self.prob_of_bitflip)
         
-        prob = prob*(self.length_of_orig*8)*100
+        prob = (1-prob**(self.length_of_orig*8))*100
         return prob
         
 if __name__=="__main__":

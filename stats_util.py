@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     print(StatsUtil.choose(1,1))
 
-    prob = StatsUtil.binom_dist(1//2, 1, 1-.0001)
+    prob = StatsUtil.binom_dist(1//2, 1, .0001)
         
-    prob = prob*(328386*8)*100
+    prob = 1-(prob)**328648
     print(prob)
